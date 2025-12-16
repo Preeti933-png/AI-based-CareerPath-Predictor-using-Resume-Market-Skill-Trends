@@ -1,0 +1,40 @@
+{% extends "base.html" %}
+{% block title %}Admin Dashboard{% endblock %}
+{% block content %}
+<div class="container mt-4">
+    <h2 class="text-center mb-4">👨‍💼 Admin Dashboard</h2>
+
+    <div class="row g-3">
+        <div class="col-md-4">
+            <a href="{{ url_for('view_users') }}" class="btn btn-outline-primary w-100 p-3">
+                👥 View Users
+            </a>
+        </div>
+        <div class="col-md-4">
+           <a href="{{ url_for('export_users') }}" class="btn btn-outline-success w-100 p-3">
+                📤 Export Users
+            </a>
+        </div>
+        <div class="col-md-4">
+            <a href="{{ url_for('manage_skills') }}" class="btn btn-outline-secondary w-100 p-3">
+                🛠️ Manage Skills
+            </a>
+        </div>
+        <div class="col-md-4">
+            <a href="{{ url_for('job_trends') }}" class="btn btn-outline-info w-100 p-3">
+                📈 View Job Trends
+            </a>
+        </div>
+        <div class="col-md-4">
+            <a href="{{ url_for('export_analysis') }}" class="btn btn-outline-dark w-100 p-3">
+                📤 Export Resume Analysis
+            </a>
+        </div>
+        <div class="col-md-4">
+            <a href="{{ url_for('logout') }}" class="btn btn-danger w-100 p-3">
+                🚪 Logout
+            </a>
+        </div>
+    </div>
+</div>
+{% endblock %}

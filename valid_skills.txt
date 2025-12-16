@@ -1,0 +1,44 @@
+python
+java
+c++
+c
+html
+css
+javascript
+sql
+mysql
+mongodb
+postgresql
+machine learning
+deep learning
+data analysis
+data visualization
+pandas
+numpy
+matplotlib
+seaborn
+flask
+django
+react
+angular
+node.js
+express
+git
+github
+linux
+bash
+shell scripting
+cloud computing
+aws
+azure
+gcp
+tensorflow
+keras
+nlp
+computer vision
+opencv
+communication
+problem solving
+teamwork
+leadership
+project management

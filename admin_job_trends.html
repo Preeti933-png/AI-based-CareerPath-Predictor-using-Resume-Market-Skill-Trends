@@ -1,0 +1,6 @@
+<h3>Dream Job Role Trends</h3>
+<ul>
+  {% for job in trends %}
+    <li>{{ job._id }} — {{ job.count }} users</li>
+  {% endfor %}
+</ul>

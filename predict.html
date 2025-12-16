@@ -1,0 +1,21 @@
+{% extends "base.html" %}
+
+{% block title %}Resume Analyzer{% endblock %}
+
+{% block content %}
+<div class="container mt-5">
+  <h3 class="text-center">Upload Resume for Analysis</h3>
+  <form method="POST" action="{{ url_for('analyze') }}" enctype="multipart/form-data">
+    <div class="mb-3">
+      <label for="resume" class="form-label">Upload Resume (PDF):</label>
+      <input type="file" name="resume" class="form-control" accept=".pdf,.doc,.docx,.png,.jpg,.jpeg" required>
+      <small class="text-muted">Accepted formats: PDF, DOC, DOCX, PNG, JPG</small>
+    </div>
+    <div class="mb-3">
+      <label for="dream_job" class="form-label">Enter Your Dream Job Role:</label>
+      <input type="text" class="form-control" name="dream_job" placeholder="e.g. Data Analyst" required>
+    </div>
+    <button type="submit" class="btn btn-primary">Analyze</button>
+  </form>
+</div>
+{% endblock %}

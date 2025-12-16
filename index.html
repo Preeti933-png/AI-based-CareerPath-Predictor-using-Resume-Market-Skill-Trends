@@ -1,0 +1,18 @@
+{% extends "base.html" %}
+{% block title %}User Dashboard{% endblock %}
+{% block content %}
+<div class="card p-4 shadow-sm">
+    <h3>Resume Analyzer</h3>
+    <form action="/analyze" method="POST" enctype="multipart/form-data">
+        <div class="mb-3">
+            <label for="resume" class="form-label">Upload Resume </label>
+            <input type="file" name="resume" id="resume" class="form-control" required>
+        </div>
+        <div class="mb-3">
+            <label for="dream_job" class="form-label">Enter Your Dream Job Role</label>
+            <input type="text" name="dream_job" id="dream_job" class="form-control" required>
+        </div>
+        <button type="submit" class="btn btn-success">Analyze</button>
+    </form>
+</div>
+{% endblock %}

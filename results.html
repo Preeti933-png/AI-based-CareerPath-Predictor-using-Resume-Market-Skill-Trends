@@ -1,0 +1,36 @@
+<!-- templates/results.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Results – Career Path Predictor</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+</head>
+<body class="bg-light">
+<div class="container mt-5">
+    <h2 class="text-center mb-4">📝 Resume Analysis Results</h2>
+
+    <h5>📄 Uploaded File: {{ filename }}</h5>
+
+    <h5 class="mt-4">✅ Extracted Skills:</h5>
+    <ul class="list-group mb-4">
+        {% for skill in skills %}
+            <li class="list-group-item">{{ skill }}</li>
+        {% endfor %}
+    </ul>
+
+    <h5 class="mt-4">📌 Skill Gap Recommendations:</h5>
+    {% if recommendations %}
+        <ul class="list-group">
+            {% for item in recommendations %}
+                <li class="list-group-item">{{ item }}</li>
+            {% endfor %}
+        </ul>
+    {% else %}
+        <p class="text-success">No major skill gaps found for the selected role.</p>
+    {% endif %}
+
+    <a href="/" class="btn btn-secondary mt-4">🔙 Go Back</a>
+</div>
+</body>
+</html>

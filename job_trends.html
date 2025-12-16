@@ -1,0 +1,28 @@
+{% extends 'base.html' %}
+{% block title %}Job Trends{% endblock %}
+
+{% block content %}
+<div class="container mt-4">
+    <h2 class="mb-4">📈 Dream Job Trends</h2>
+    {% if trends %}
+    <table class="table table-bordered">
+        <thead>
+            <tr>
+                <th>Dream Job Role</th>
+                <th>Times Analyzed</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for trend in trends %}
+            <tr>
+                <td>{{ trend._id }}</td>
+                <td>{{ trend.count }}</td>
+            </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+    {% else %}
+        <p>No data available.</p>
+    {% endif %}
+</div>
+{% endblock %}

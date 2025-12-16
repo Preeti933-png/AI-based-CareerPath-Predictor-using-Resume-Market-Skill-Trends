@@ -1,0 +1,9 @@
+Flask
+Flask-PyMongo
+python-docx
+pytesseract
+Pillow
+pymupdf
+spacy
+pandas
+werkzeug
